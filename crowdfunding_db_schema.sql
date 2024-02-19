@@ -14,7 +14,8 @@ CREATE TABLE subcategory(
 CREATE TABLE contacts(
         contact_id INTEGER NOT NULL PRIMARY KEY,
         first_name VARCHAR NOT NULL, 
-        last_name VARCHAR NOT NULL
+        last_name VARCHAR NOT NULL,
+        email VARCHAR NOT NULL
 );
 
 CREATE TABLE campaigns(
@@ -36,7 +37,6 @@ CREATE TABLE campaigns(
         FOREIGN KEY (category_id) REFERENCES category(category_id),
         FOREIGN KEY (subcategory_id) REFERENCES subcategory(subcategory_id)
 );
-
 
 Select * from category
 Select * from subcategory
